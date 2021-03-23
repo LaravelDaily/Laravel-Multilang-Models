@@ -26,7 +26,10 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        Post::create($request->validated());
+        $post = new Post();
+        $post->setTranslations('title', $request->input('title'));
+        $post->setTranslations('full_text', $request->input('full_text'));
+        $post->save();
 
         return redirect()->route('dashboard');
     }
