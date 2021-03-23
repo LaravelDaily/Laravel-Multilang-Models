@@ -8,7 +8,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $posts = Post::translatedIn(app()->getLocale())
+        $posts = Post::withTranslation()
+            ->translatedIn(app()->getLocale())
             ->latest()
             ->take(10)
             ->get();
