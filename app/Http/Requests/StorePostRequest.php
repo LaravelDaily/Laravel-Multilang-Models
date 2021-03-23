@@ -24,13 +24,13 @@ class StorePostRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'title_en' => 'required',
-            'full_text_en' => 'required',
+            'title.en' => 'required',
+            'full_text.en' => 'required',
         ];
 
         foreach (config('app.available_locales') as $locale) {
-            $rules['title_' . $locale] = 'string';
-            $rules['full_text_' . $locale] = 'string';
+            $rules['title.' . $locale] = 'string';
+            $rules['full_text.' . $locale] = 'string';
         }
 
         return $rules;

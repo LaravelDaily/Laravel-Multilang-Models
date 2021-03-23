@@ -17,16 +17,16 @@
                         <div class="mt-4">
                             <label for="title_{{ $locale }}">Title ({{ strtoupper($locale) }})</label>
 
-                            <input type="text" name="title_{{ $locale }}" id="title_{{ $locale }}"
-                                   value="{{ old('title_' . $locale) }}"
+                            <input type="text" name="title[{{ $locale }}]" id="title_{{ $locale }}"
+                                   value="{{ old('title.' . $locale) }}"
                                    class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required autofocus />
                         </div>
 
                         <div class="mt-4">
                             <label for="full_text_{{ $locale }}">Full Text ({{ strtoupper($locale) }})</label>
 
-                            <textarea name="full_text_{{ $locale }}" id="full_text_e{{ $locale }}" rows="5"
-                                      class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">{{ old('full_text_' . $locale) }}</textarea>
+                            <textarea name="full_text[{{ $locale }}]" id="full_text_{{ $locale }}" rows="5"
+                                      class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">{{ old('full_text.' . $locale) }}</textarea>
                         </div>
                         @endforeach
 
