@@ -25,7 +25,7 @@
                         <div class="mt-4">
                             <label for="full_text_{{ $locale }}">Full Text ({{ strtoupper($locale) }})</label>
 
-                            <textarea name="full_text_{{ $locale }}" id="full_text_e{{ $locale }}" rows="5"
+                            <textarea name="full_text_{{ $locale }}" id="full_text_{{ $locale }}" rows="5"
                                       class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">{{ old('full_text_' . $locale) }}</textarea>
                         </div>
                         @endforeach
